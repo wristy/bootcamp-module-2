@@ -15,14 +15,14 @@ Things you'll accomplish:
 
 ## Getting Started
 
-You should've cloned this repo back in module 0.
+First, fork the repo into your own Github account and clone the forked
+repo onto your local device.
 
-To switch to module 2, pull the branch named `module-2` from the origin
-and switch to that branch in Xcode.
+Refer to [module 0](https://github.com/gtiosclub/bootcamp-module-0) for
+instructions on how to do so.
 
-If you forgot how to do this, reference module 0 for instructions.
-
-You should see the playground MoreSwiftBasics in the file navigator.
+Once you've cloned the repo, open the MoreSwiftBasics playgound if you
+haven't already.
 
 Within MoreSwiftBasics you should see the following playground files:
 
