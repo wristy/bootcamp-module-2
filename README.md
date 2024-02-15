@@ -276,8 +276,6 @@ for i in 0 to (arr_length - 1):
     arr[min] = temp
 ```
 
-3. It's important to stress that some types of closures may obscure 
-
 ## That's all!
 
 Hopefully by now you've been able to get hands-on experience with the basics

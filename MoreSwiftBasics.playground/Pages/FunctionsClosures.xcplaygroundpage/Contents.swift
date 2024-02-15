@@ -265,20 +265,7 @@ for i in 0 to (arr_length - 1):
 func selectionSort(_ input: [String]) -> [String] {
     var arr: [String] = input
     /* BEGIN CODE */
-    var min: Int = 0
-    var temp: String = ""
     
-    for i in 0..<(arr.count - 1) {
-        min = i
-        for j in (i + 1)..<arr.count {
-            if arr[j].count < arr[min].count {
-                min = j
-            }
-        }
-        temp = arr[i]
-        arr[i] = arr[min]
-        arr[min] = temp
-    }
     /* END CODE */
     return arr
 }
