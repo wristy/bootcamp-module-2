@@ -37,7 +37,7 @@ arr2.append(3)
 arr2.append(1)
 arr2.append(2)
 print("arr2 after:  \(arr2)")
-// <-- [RUN HERE] Do the before/after values of arr2 match what you expect?
+// <-- [RUN HERE] Do thsdssddddde before/after values of arr2 match what you expect?
 print("")
 
 // Of course, you can insert elements at any index in the Array:
@@ -124,25 +124,29 @@ print("*** ARRAY PRACTICE ***")
 var animalArray: [String] = ["Lion", "Zebra", "Elephant", "Turtle"]
 var optionalArray: [Int]?
 
-// [2] Is there a logical error with accessing index `4` in a 4-element array?
-print("4th element of animalArray: \(animalArray[4])")
+// [2] Is there a logical error with accessing index `4` in a 4-element array? Yes, index out of range!
+print("4th element of animalArray: \(animalArray[3])")
 
 // [3] The operation below is quite dangerous. How can we make it safer?
-let unwrappedArray = optionalArray!
-print(unwrappedArray)
+if let unwrappedArray = optionalArray {
+    print(unwrappedArray)
+}
+
 
 
 // [4] Initialize optionalArray
 /* BEGIN CODE */
-
+optionalArray = [1]
 /* END CODE */
 
 // [5, 6, 7] Add elements to optionalArray
 /* BEGIN CODE */
-
+optionalArray?.append(10)
+optionalArray?.append(contentsOf: [6, 7, 8, 9])
+optionalArray?.insert(55, at: 2)
 /* END CODE */
 
 // [8] Print the 5th element of optionalArray
 /* BEGIN CODE */
-
+print(optionalArray?[4])
 /* END CODE */

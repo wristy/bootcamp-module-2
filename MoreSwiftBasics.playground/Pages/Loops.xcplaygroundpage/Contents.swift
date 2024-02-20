@@ -137,17 +137,14 @@ var numArr: [Int] = Array(repeating: 0, count: 5)
 
 // [1] Rewrite this code to use a loop
 /* BEGIN CODE */
-numArr[0] = 10
-numArr[1] = 20
-numArr[2] = 30
-numArr[3] = 40
-numArr[4] = 50
+for i in 0..<5 {
+    numArr[i] = (i+1) * 10
+}
 /* END CODE */
 print("numArr: \(numArr)")
 // <-- [RUN HERE] The output should be unchanged
 
-// Here, we have a dictionary which maps message ID values to their
-// corresponding message contents.
+// Here, we have a dictionary which maps message ID values to their corresponding message contents.
 var messages: [String: String] = [
     "l8y48": "Have to go now. Bye!",
     "cwhrp": "Hello!",
@@ -159,7 +156,9 @@ var messages: [String: String] = [
 
 // [2] Print out each message ID and their contents.
 //     Reference the docs for the desired output format.
-print("\nMessage Data:")
+for (k, v) in messages {
+    print("\(k): \(v)")
+}
 /* BEGIN CODE */
 
 /* END CODE */
@@ -184,27 +183,39 @@ print("Goodbye!")
 //     Refer to the docs for tips & tricks.
 print("\n(WHILE) MESSAGES: ")
 /* BEGIN CODE */
-
+var i = 0
+while i < messageOrder.count {
+    print(messages[messageOrder[i]] ?? "no message exists")
+    i += 1
+}
 /* END CODE */
 // <-- [RUN HERE] Check if your output matches the example.
 
 // [4] Do the same thing, but with a repeat-while loop
 print("\n(REPEAT-WHILE) MESSAGES: ")
 /* BEGIN CODE */
-
+var j = 0
+repeat {
+    print(messages[messageOrder[j]] ?? "no message exists")
+    j += 1
+} while j < messageOrder.count
 /* END CODE */
 // <-- [RUN HERE] Check if your output matches the example.
 
 // [5] Do the same thing, but with a for loop using default iterator
 print("\n(FOR ITERATOR) MESSAGES: ")
 /* BEGIN CODE */
-
+for key in messageOrder {
+    print(messages[key]!)
+}
 /* END CODE */
 // <-- [RUN HERE] Check if your output matches the example.
 
 // [6] Do the same thing, but with a for loop using a range
 print("\n(FOR RANGE) MESSAGES: ")
 /* BEGIN CODE */
-
+for i in 0..<messageOrder.count {
+    print(messages[messageOrder[i]] ?? "no message exists")
+}
 /* END CODE */
 // <-- [RUN HERE] Check if your output matches the example.
